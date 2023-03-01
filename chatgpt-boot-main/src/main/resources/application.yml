@@ -1,0 +1,95 @@
+#============================#
+# server 配置
+#============================#
+server:
+  port: 82
+  max-http-header-size: 10240
+  servlet:
+    context-path: /chatgpt/v1
+
+#============================#
+# spring 配置
+#============================#
+spring:
+  application:
+    # 应用名
+    name: chatgpt
+  profiles:
+    active: @spring.active@
+  servlet:
+    multipart:
+      max-request-size: 100MB
+      max-file-size: 100MB
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss.SSS
+    locale: zh_CN
+    serialization:
+      # 格式化输出
+      indent_output: false
+  main:
+    allow-circular-references: true
+    #解决swagger版本路径不兼容问题
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+#============================#
+# mybatisplus 配置
+#============================#
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: true
+    lazy-loading-enabled: true
+    multiple-result-sets-enabled: true
+    log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl
+  global-config:
+    banner: false
+    db-config:
+      id-type: assign_id
+      table-underline: true
+    enable-sql-runner: true
+      #数据库类型
+    db-type: MYSQL
+  configuration-properties:
+    prefix:
+    #如果数据库为postgresql，则需要配置为blobType: BINARY
+    blobType: BLOB
+    #如果数据库为oracle或mssql，则需要配置为boolValue: 1
+    boolValue: true
+
+#============================#
+# logging 配置
+#============================#
+logging:
+  level:
+    root: info
+  file:
+    path: /root/javadog/chatgpt/logs/${spring.application.name}/
+    name: ${spring.application.name}
+  logback:
+    rollingpolicy:
+      max-history: 7
+      max-file-size: 10MB
+
+#============================#
+# file 配置
+#============================#
+file:
+  # 静态附件前缀
+  static-prefix: attach
+  # 上传的文件对外暴露的访问路径
+  access-path-pattern: /${file.static-prefix}/**
+  # 文件上传目录
+  upload-folder: /root/javadog/chatgpt/
+  # 文件上传最大
+  max-post-size: 10
+
+#============================#
+# OpenAI 配置
+#============================#
+openai:
+  token: xxxxxxx
+  timeout: 30000

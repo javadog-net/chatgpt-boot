@@ -1,0 +1,23 @@
+#服务配置
+server:
+  port: 7001
+  max-http-header-size: 10240
+
+# Mysql数据库
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_chatgpt?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT&nullCatalogMeansCurrent=true
+    username: root
+    password: root
+
+# file 配置
+file:
+  # 文件上传目录
+  upload-folder: D://javadog/chatgpt
+
+# mybatisplus 配置
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
