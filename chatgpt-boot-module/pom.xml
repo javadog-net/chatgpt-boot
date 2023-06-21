@@ -106,6 +106,15 @@
             <groupId>com.theokanning.openai-gpt3-java</groupId>
             <artifactId>client</artifactId>
         </dependency>
+        <!-- 导入openai依赖 -->
+        <dependency>
+            <groupId>com.theokanning.openai-gpt3-java</groupId>
+            <artifactId>api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.theokanning.openai-gpt3-java</groupId>
+            <artifactId>service</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

@@ -1,24 +1,29 @@
 package net.javadog.chatgpt.service.impl;
 
 import cn.hutool.core.bean.BeanUtil;
-import cn.hutool.core.util.ObjectUtil;
-import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.theokanning.openai.OpenAiService;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.theokanning.openai.OpenAiApi;
 import com.theokanning.openai.completion.CompletionChoice;
 import com.theokanning.openai.completion.CompletionRequest;
+import com.theokanning.openai.service.OpenAiService;
 import net.javadog.chatgpt.dto.request.MessageRequest;
 import net.javadog.chatgpt.dto.response.MessageResponse;
 import net.javadog.chatgpt.entity.Message;
 import net.javadog.chatgpt.mapper.MessageMapper;
 import net.javadog.chatgpt.service.MessageService;
 import net.javadog.chatgpt.shiro.util.SubjectUtil;
+import okhttp3.OkHttpClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import retrofit2.Retrofit;
 
+import java.net.InetSocketAddress;
+import java.net.Proxy;
+import java.time.Duration;
 import java.util.Date;
 import java.util.List;
 
@@ -93,7 +98,17 @@ public class MessageServiceImpl extends ServiceImpl<MessageMapper, Message> impl
 
     private String handleOpenAI(Message message){
         // 调用openai-gpt3-java方法
-        OpenAiService service = new OpenAiService(OPENAPI_TOKEN, TIMEOUT);
+        ObjectMapper mapper = OpenAiService.defaultObjectMapper();
+        // 重要的事说三遍，重要的事说三遍，重要的事说三遍
+        // 此处使用的是代理，需要自己配置好，我这使用的是https://www.172173.com/2022/11/16/VPN-linux-V2ray-client/
+        Proxy proxy = new Proxy(Proxy.Type.SOCKS, new InetSocketAddress("127.0.0.1", 10808));
+        OkHttpClient client = OpenAiService.defaultClient(OPENAPI_TOKEN, Duration.ofMinutes(10))
+                .newBuilder()
+                .proxy(proxy)
+                .build();
+        Retrofit retrofit = OpenAiService.defaultRetrofit(client, mapper);
+        OpenAiApi api = retrofit.create(OpenAiApi.class);
+        OpenAiService service = new OpenAiService(api);
         CompletionRequest.CompletionRequestBuilder builder = CompletionRequest.builder()
                 .model(MODEL)
                 .prompt(String.format(PROMPT, message.getMsgContent()))
