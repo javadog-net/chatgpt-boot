@@ -1,3 +1,5 @@
+## 我正在参加「掘金·启航计划」
+
 ## 前言
 ### 🍊缘由
 #### 想让没体验过chatGPT的小伙伴，学习对接并复刻出自己的chatGPT
@@ -22,21 +24,21 @@
 ###  🎨 水一波图
 **自制ChatGPT 聊天gif动图**
 
-![请添加图片描述](https://img-blog.csdnimg.cn/4dcc8b619f394699a68bc85ef97b3d8e.gif)
-**登录注册图**![请添加图片描述](https://img-blog.csdnimg.cn/b13bb7b4b7a24f23986b8f381c51a30d.png)
+![请添加图片描述](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/12ee2310eac040f88939710ec4ef0d01~tplv-k3u1fbpfcp-zoom-1.image)
+**登录注册图**![请添加图片描述](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/011d11d4b71747baa26daabe3cc7df22~tplv-k3u1fbpfcp-zoom-1.image)
 **聊天图**
-![请添加图片描述](https://img-blog.csdnimg.cn/b03da1b0dcee48839d190ce6db59c7fd.png)
+![请添加图片描述](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c0cc32e34a10421ba3ffc00c3316938d~tplv-k3u1fbpfcp-zoom-1.image)
 ******
 
 ###  🍭体验地址
 #### 关注公众号【JavaDog程序狗】，即可获取在线体验
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d01ed0c497a1433b8163badb37e20e4b.png)
+![在这里插入图片描述](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/049d09804e6a4812824926113b62d343~tplv-k3u1fbpfcp-zoom-1.image)
 ******
 
 ###  🍩源码
 >  关注公众号【JavaDog程序狗】，发送【ChatGPT源码】即可无套路获得
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4d3d3c7a16264b1bba7d9b1c0826e1ab.png)
+![在这里插入图片描述](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/143b6a79e0364494b1c499cf26cf8965~tplv-k3u1fbpfcp-zoom-1.image)
 
 ******
 
@@ -46,7 +48,7 @@
 
 关于如何注册账号？请参考本狗文章[【ChatGPT】手摸手，带你玩转ChatGPT](https://mp.weixin.qq.com/s/9wEelbTN6kaChkCQHmgJMQ)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/113a5b098e0348b88544c9d31982690e.png)
+![在这里插入图片描述](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/621fb852c60e4da9a66fb58c16a4009b~tplv-k3u1fbpfcp-zoom-1.image)
  🌰Tips: 如果没有账号可以**关注公众号**【JavaDog程序狗】回复【ChatGPT】即可获得账号
  
 ******
@@ -103,7 +105,7 @@
 ******
 ### 3.开发
 #### 后端代码总览
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fb0dc6511d224c318e44f8c2fee06d87.png)
+![在这里插入图片描述](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/647e942a202a46adbe84bb4c7e7c8617~tplv-k3u1fbpfcp-zoom-1.image)
 
 
 具体搭建此处省略，如有疑问请参考[【SpringBoot】还不会SpringBoot项目模块分层？来这手把手教你](https://blog.csdn.net/baidu_25986059/article/details/128739849) 完全跟着复制分层即可。还有doc文件夹下有DB脚本，别忘跑！
@@ -146,7 +148,7 @@ return endQuestionAnswer;
  1. OPENAPI_TOKEN
 >  访问[https://platform.openai.com/account/api-keys](https://platform.openai.com/account/api-keys)，在openai 账号管理**API keys**中找到**SECRET KEY**，这个是调用接口凭据
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/757a481d08674945949c577d737ec23b.png)
+![在这里插入图片描述](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/046ba662d8a948b89113fc25fb8cda28~tplv-k3u1fbpfcp-zoom-1.image)
 
 2. TIMEOUT
 > 超时时间，毫秒为单位，本狗写了30000，共30秒
@@ -173,7 +175,7 @@ return endQuestionAnswer;
 
 #### 前端代码总览
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b86efe1eef794dc99890fdf98039900f.png)
+![在这里插入图片描述](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f95e266a7edb4e5b9c6cd5fa6ee795f8~tplv-k3u1fbpfcp-zoom-1.image)
 #### 前端-关键点
 **如何实现打字机效果？**
 > 原理就是采用定时器，每次截取一个字节进行内容填充
@@ -211,24 +213,24 @@ intervalFunc(){
 #### 后端
 > 修改环境变量
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/da185331388043d7aa9c7f4f7f04f123.png)
+![在这里插入图片描述](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/117cbfd1606f4a4faf6129c654ed2165~tplv-k3u1fbpfcp-zoom-1.image)
 
 > 直接在IDEA运行启动
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/72914fc2e42742b3bb46733372722e09.png)
+![在这里插入图片描述](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c40274a9a084463385de6abe930eb221~tplv-k3u1fbpfcp-zoom-1.image)
 
 #### 前端
 > 先在项目目录中执行 **npm i** ，下载依赖
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d218a74b1c28493d8f435715171f7c1b.png)
+![在这里插入图片描述](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/adfff6ad87ad404d98f182e555e0851b~tplv-k3u1fbpfcp-zoom-1.image)
 
 > 修改环境变量，在/common/config/env.js下
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/182c921e805d476988eff5ace87dea9d.png)
+![在这里插入图片描述](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dec68fdad01143f58077f5ecc1c9ba61~tplv-k3u1fbpfcp-zoom-1.image)
 
 > 然后再HBuilder X工具中点击运行即可
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/bbc87d26f5b040c8b87e2308eaf8e20f.png)
+![在这里插入图片描述](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a9c56ab28e09402b8ea67672c031b815~tplv-k3u1fbpfcp-zoom-1.image)
 ## 总结
 本文简单实现了**OpenAI-Java接口对接**，**模仿ChatGPT**做了一个**简易AI聊天**，其中功能较为简单，适用于**学习练手**，其中略过了很多基础的搭建环节，大家如果对从零一步一步搭建项目比较感兴趣或期望较高，请再评论区留言，反响多的话我会再出一版**从零开始，手把手搭建项目的文章**。
 
@@ -236,7 +238,7 @@ intervalFunc(){
 ## 写在最后
 欢迎大家关注公众号【JavaDog程序狗】，**任何留言**需要我都会**及时回复**，希望我们一同进步
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e74f3636c05a430eab8819333fa004eb.jpeg)
+![在这里插入图片描述](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dea67cc21c834363abba4efd2842e336~tplv-k3u1fbpfcp-zoom-1.image)
 
 | JavaDog| 狗屋地址 |
 | :----:| :----: | 
